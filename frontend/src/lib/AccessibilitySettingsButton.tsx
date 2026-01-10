@@ -9,7 +9,7 @@
 
 import React, { useState } from 'react';
 import { Settings, Eye, Type, Zap, Hand } from 'lucide-react';
-import { AccessibilityPanel, useAccessibility } from '@/lib/accessibilityContext';
+import { AccessibilityPanel, useAccessibility } from '@/lib/AccessibilityContext';
 
 export function AccessibilitySettingsButton() {
   const [isPanelOpen, setIsPanelOpen] = useState(false);

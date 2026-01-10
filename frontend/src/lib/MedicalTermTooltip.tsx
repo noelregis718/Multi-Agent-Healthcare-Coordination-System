@@ -14,8 +14,8 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { getMedicalTermInfo, MedicalTerm } from './medical-terms';
-import { useAccessibility } from '@/lib/accessibilityContext';
+import { getMedicalTermInfo, MedicalTerm } from '@/lib/medical-terms';
+import { useAccessibility } from '@/lib/AccessibilityContext';
 import { HelpCircle } from 'lucide-react';
 
 interface MedicalTermTooltipProps {

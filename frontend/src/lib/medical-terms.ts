@@ -332,4 +332,3 @@ export interface MedicalTerm {
   };
   
   export default medicalTerms;
-  
