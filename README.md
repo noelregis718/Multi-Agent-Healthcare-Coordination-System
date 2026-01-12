@@ -342,7 +342,7 @@ npm run dev
 
 ## 👥 Team
 
-**[Your Name]** - CEO & Technical Lead
+**Noel Regis** - CEO & Technical Lead
 - Background in [relevant experience]
 - Personal motivation: [family member with chronic conditions]
 
