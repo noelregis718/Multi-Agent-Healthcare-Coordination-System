@@ -69,7 +69,7 @@ cd careorbit
 git init
 git add .
 git commit -m "Initial CareOrbit MVP"
-git remote add origin https://github.com/yourusername/careorbit.git
+git remote add origin https://github.com/noelregis718/careorbit.git
 git push -u origin main
 ```
 

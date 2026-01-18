@@ -226,15 +226,9 @@ creates better experiences for everyone."
 
 **Why We'll Win**
 
-[Team member 1] - CEO & Technical Lead
-- [Relevant background]
-- Personal motivation: [Family connection to problem]
-
-[Team member 2] - [Role]
-- [Relevant background]
-
-[Team member 3] - [Role]  
-- [Relevant background]
+Noel Regis - CEO & Technical Lead
+- Background in Healthcare AI & Full-stack Development
+- Personal motivation: Improving care coordination for complex chronic conditions
 
 Advisory support:
 - [University/Program name]

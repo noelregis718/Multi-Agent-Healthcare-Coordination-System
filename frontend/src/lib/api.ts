@@ -11,11 +11,11 @@ import type {
   ChatMessage,
 } from '@/types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
 
 class ApiError extends Error {
   status: number;
-  
+
   constructor(message: string, status: number) {
     super(message);
     this.name = 'ApiError';
@@ -28,11 +28,11 @@ async function fetchApi<T>(
   options: RequestInit = {}
 ): Promise<T> {
   const url = `${API_BASE_URL}${endpoint}`;
-  
+
   const defaultHeaders: HeadersInit = {
     'Content-Type': 'application/json',
   };
-  
+
   const response = await fetch(url, {
     ...options,
     headers: {
@@ -40,23 +40,23 @@ async function fetchApi<T>(
       ...options.headers,
     },
   });
-  
+
   if (!response.ok) {
     const error = await response.json().catch(() => ({ detail: 'Unknown error' }));
     throw new ApiError(error.detail || 'Request failed', response.status);
   }
-  
+
   return response.json();
 }
 
 // Patient API
 export const patientApi = {
   getAll: () => fetchApi<Patient[]>('/api/patients'),
-  
+
   getById: (id: string) => fetchApi<Patient>(`/api/patients/${id}`),
-  
+
   getSummary: (id: string) => fetchApi<HealthSummary>(`/api/patients/${id}/summary`),
-  
+
   create: (data: Partial<Patient>) =>
     fetchApi<Patient>('/api/patients', {
       method: 'POST',
@@ -70,7 +70,7 @@ export const medicationApi = {
     fetchApi<Medication[]>(
       `/api/patients/${patientId}/medications${activeOnly ? '?active_only=true' : ''}`
     ),
-  
+
   create: (data: Partial<Medication>) =>
     fetchApi<Medication>('/api/medications', {
       method: 'POST',
@@ -84,7 +84,7 @@ export const appointmentApi = {
     fetchApi<Appointment[]>(
       `/api/patients/${patientId}/appointments${upcomingOnly ? '?upcoming_only=true' : ''}`
     ),
-  
+
   create: (data: Partial<Appointment>) =>
     fetchApi<Appointment>('/api/appointments', {
       method: 'POST',
@@ -98,7 +98,7 @@ export const careGapApi = {
     fetchApi<CareGap[]>(
       `/api/patients/${patientId}/care-gaps${includeResolved ? '?include_resolved=true' : ''}`
     ),
-  
+
   resolve: (gapId: string) =>
     fetchApi<{ status: string; gap_id: string }>(`/api/care-gaps/${gapId}/resolve`, {
       method: 'PATCH',
@@ -116,7 +116,7 @@ export const chatApi = {
         context,
       }),
     }),
-  
+
   getHistory: (patientId: string, limit = 50) =>
     fetchApi<ChatMessage[]>(`/api/patients/${patientId}/chat-history?limit=${limit}`),
 };

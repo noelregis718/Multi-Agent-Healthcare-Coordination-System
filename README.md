@@ -214,7 +214,7 @@ Our multi-agent architecture directly mirrors **Microsoft's Healthcare Agent Orc
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/careorbit.git
+git clone https://github.com/noelregis718/careorbit.git
 cd careorbit
 ```
 
@@ -257,8 +257,8 @@ npm run dev
 ### 4. Access Application
 
 - **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
-- **API Docs**: http://localhost:8000/docs
+- **Backend API**: http://localhost:8001
+- **API Docs**: http://localhost:8001/docs
 
 ---
 
@@ -343,14 +343,10 @@ npm run dev
 ## 👥 Team
 
 **Noel Regis** - CEO & Technical Lead
-- Background in [relevant experience]
-- Personal motivation: [family member with chronic conditions]
+- Background in Healthcare AI & Full-stack Development
+- Personal motivation: Improving care coordination for patients with complex chronic conditions
 
-**[Team Member 2]** - [Role]
-- [Background]
-
-**[Team Member 3]** - [Role]
-- [Background]
+---
 
 ---
 
@@ -372,6 +368,6 @@ This project is developed for Microsoft Imagine Cup 2026. All rights reserved.
 
 **Built with ❤️ for Imagine Cup 2026**
 
-[Website](#) • [Demo Video](#) • [Pitch Deck](#) • [Contact](#)
+[Website](#) • [Demo Video](#) • [Pitch Deck](#) • [Contact](mailto:noelregis718@gmail.com)
 
 </div>
